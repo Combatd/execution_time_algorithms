@@ -23,12 +23,16 @@ end
 # Find the sums of all contiguous sub-arrays and return the max.
 # Phase 1
 # O(n^3ß)
+example_1 = [5, 3, -7]
+example_2 = [2, 3, -6, 7, -6, 7]
+example_3 = [-5, -1, -3]
+
 def largest_contiguous_subsum(integers)
     sub_sums = []
     integers.each_with_index do |number, index|
         list[index..-1].each_with_index do |sub_num, index2|
             # outer element compares to inner element
-            sub_sums << list[index..index+index2]
+            sub_sums << integers[index..index+index2]
         end
     end
 
@@ -60,3 +64,10 @@ def largest_contiguous_subs(numbers)
     end
     largest_sum
 end
+
+largest_contiguous_subsum(example_1)
+largest_contiguous_subsum(example_2)
+largest_contiguous_subsum(example_3)
+largest_contiguous_subs(example_1)
+largest_contiguous_subs(example_2)
+largest_contiguous_subs(example_3)
