@@ -30,7 +30,7 @@ example_3 = [-5, -1, -3]
 def largest_contiguous_subsum(integers)
     sub_sums = []
     integers.each_with_index do |number, index|
-        list[index..-1].each_with_index do |sub_num, index2|
+        integers[index..-1].each_with_index do |sub_num, index2|
             # outer element compares to inner element
             sub_sums << integers[index..index+index2]
         end
@@ -47,6 +47,10 @@ def largest_contiguous_subsum(integers)
     end
 
 end
+
+p largest_contiguous_subsum(example_1)
+p largest_contiguous_subsum(example_2)
+p largest_contiguous_subsum(example_3)
 
 # Phase 2
 def largest_contiguous_subs(numbers)
@@ -65,9 +69,7 @@ def largest_contiguous_subs(numbers)
     largest_sum
 end
 
-largest_contiguous_subsum(example_1)
-largest_contiguous_subsum(example_2)
-largest_contiguous_subsum(example_3)
-largest_contiguous_subs(example_1)
-largest_contiguous_subs(example_2)
-largest_contiguous_subs(example_3)
+
+p largest_contiguous_subs(example_1)
+p largest_contiguous_subs(example_2)
+p largest_contiguous_subs(example_3)
