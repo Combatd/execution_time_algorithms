@@ -41,14 +41,17 @@ def largest_contiguous_subsum(integers)
             accumulator
         end
     end
+
 end
 
 # Phase 2
-# def largest_contiguous_subsum(integers)
-#     sub_sums = []
-#     integers.each do |ele, idx|
-#         sub_sums << integers.first if idx === 0
-#         sub_sums << integers[-1] if idx === integers.length - 1
+def largest_contiguous_subs(numbers)
+    # point to value of first element
+    largest_sum = numbers.first
+    current_sum = numbers.first 
 
-#     end
-# end
+    # Handle negative numbers
+    return numbers.max if numbers.all? { |num| num < 0 }
+
+
+end
