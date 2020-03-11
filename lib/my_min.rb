@@ -49,7 +49,14 @@ def largest_contiguous_subs(numbers)
     # point to value of first element
     largest_sum = numbers.first
     current_sum = numbers.first 
-
     # Handle negative numbers
     return numbers.max if numbers.all? { |num| num < 0 }
+    # accumulate all after first element
+    numbers.each_with_index do |number, idx|
+        next if idx === 0
+        current_sum = 0 if current_sum < 0
+        current_sum += number
+        largest_sum = current_sum if current_sum > largest_sum
+    end
+    largest_sum
 end
