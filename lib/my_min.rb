@@ -52,6 +52,4 @@ def largest_contiguous_subs(numbers)
 
     # Handle negative numbers
     return numbers.max if numbers.all? { |num| num < 0 }
-
-
 end
