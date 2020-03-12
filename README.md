@@ -21,3 +21,5 @@ What is the time complexity for this function?
 Now, I rewrite the function to iterate through the list just once while keeping track of the minimum. What is the time complexity?
 
 ## Largest Contiguous Sub-sum
+
+You have an array of integers and you want to find the largest contiguous (together in sequence) sub-sum. Find the sums of all contiguous sub-arrays and return the max.
